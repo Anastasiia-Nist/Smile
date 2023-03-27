@@ -1,0 +1,9 @@
+.header__nav-list {
+  display: flex;
+}
+.header__nav-list li {
+  margin: 0 38px;
+}
+.header__nav-list li:last-child {
+  margin-right: 45px;
+}

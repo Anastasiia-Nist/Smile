@@ -1,0 +1,8 @@
+.form__input {
+  margin-bottom: 22px;
+  height: 40px;
+  width: 331px;
+}
+.form__input:last-child {
+  margin-bottom: 52px;
+}

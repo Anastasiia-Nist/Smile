@@ -1,0 +1,16 @@
+.footer {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 48px 110px 51px 62px;
+  background-color: #fff;
+  border: 2px solid #000000;
+  margin: 0;
+}
+@media screen and (max-width: 1480px) {
+  .footer {
+    justify-content: space-between;
+  }
+}

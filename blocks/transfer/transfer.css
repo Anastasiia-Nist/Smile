@@ -1,0 +1,11 @@
+.transfer {
+  display: flex;
+  max-width: 82%;
+  align-items: center;
+  margin: 171px auto 0 146px;
+}
+@media screen and (max-width: 1280px) {
+  .transfer {
+    flex-direction: column;
+  }
+}

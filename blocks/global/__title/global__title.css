@@ -1,0 +1,10 @@
+.global__title {
+  font-family: "IBM Plex Mono";
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 87%;
+  text-align: right;
+  position: sticky;
+  z-index: 1;
+  margin: 0;
+}

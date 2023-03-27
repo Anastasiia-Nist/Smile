@@ -1,0 +1,5 @@
+.header__nav-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}

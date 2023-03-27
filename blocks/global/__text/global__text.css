@@ -1,0 +1,9 @@
+.global__text {
+  max-width: 730px;
+  margin: 0 auto 0 180px;
+}
+@media screen and (max-width: 1480px) {
+  .global__text {
+    margin-left: 40px;
+  }
+}

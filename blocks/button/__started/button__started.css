@@ -1,0 +1,17 @@
+.button__started {
+  width: 109px;
+  height: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 122%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #9747ff;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+}
+.button__started:hover {
+  background-color: #fffb47;
+  color: #000000;
+  transition: 0.3s;
+}
