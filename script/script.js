@@ -1,9 +1,10 @@
 const popup = document.querySelector(".popup");
 const btns = document.querySelectorAll(".button__started");
+const loginForm = document.forms.LoginForm
 
 const openPopup = () => {
   popup.classList.add("popup_opened");
-  document.addEventListener("keydown", closeByEscape);
+  document.addEventListener("keydown", closeByEscape); 
 };
 const closePopup = () => {
   popup.classList.remove("popup_opened");
@@ -19,5 +20,10 @@ const closeByEscape = (evt) => {
 
 btns.forEach((btn) => {
   btn.addEventListener("click", openPopup);
-  console.log("work");
 });
+const preventDefault = (evt) => {
+  evt.preventDefault();
+  closePopup();
+}
+
+loginForm.addEventListener("submit", preventDefault);
