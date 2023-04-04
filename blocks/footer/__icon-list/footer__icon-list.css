@@ -1,11 +1,11 @@
-.footer__logo {
+.footer__icon-list {
   display: flex;
   justify-content: space-between;
   min-width: 152px;
   margin-left: auto;
 }
 @media screen and (max-width: 1480px) {
-  .footer__logo {
+  .footer__icon-list {
     margin-left: 0;
   }
 }

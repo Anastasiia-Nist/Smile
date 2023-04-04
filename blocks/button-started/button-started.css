@@ -1,4 +1,4 @@
-.button__started {
+.button-started {
   width: 109px;
   height: 40px;
   font-weight: 700;
@@ -10,7 +10,7 @@
   border: 2px solid #000000;
   box-shadow: 2px 2px 0px #000000;
 }
-.button__started:hover {
+.button-started:hover {
   background-color: #fffb47;
   color: #000000;
   transition: 0.3s;

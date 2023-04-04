@@ -4,17 +4,17 @@
 @import url(../blocks/page/page.css);
 
 /*миксы*/
+@import url(../blocks/logo/logo.css);
+@import url(../blocks/icon/icon.css);
 @import url(../blocks/link/link.css);
 @import url(../blocks/list/list.css);
 @import url(../blocks/button/button.css);
-@import url(../blocks/button/__started/button__started.css);
+@import url(../blocks/button-started/button-started.css);
 
 /*header*/
 @import url(../blocks/header/header.css);
-@import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/header/__link/header__link.css);
 @import url(../blocks/header/__nav-wrapper/header__nav-wrapper.css);
-@import url(../blocks/header/__nav/header__nav.css);
 @import url(../blocks/header/__nav-list/header__nav-list.css);
 
 /* intro*/
@@ -48,7 +48,7 @@
 
 /* footer*/
 @import url(../blocks/footer/footer.css);
-@import url(../blocks/footer/__logo/footer__logo.css);
+@import url(../blocks/footer/__icon-list/footer__icon-list.css);
 @import url(../blocks/footer/__nav-wrapper/footer__nav-wrapper.css);
 
 
@@ -57,7 +57,8 @@
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
-@import url(../blocks/popup/__logo/popup__logo.css);
+@import url(../blocks/popup/__icon-list/popup__icon-list.css);
+@import url(../blocks/popup/__button-close/popup__button-close.css);
 
 /* form*/
 @import url(../blocks/form/form.css);

@@ -1,5 +1,5 @@
 const popup = document.querySelector(".popup");
-const btns = document.querySelectorAll(".button__started");
+const btns = document.querySelectorAll(".button-started");
 const loginForm = document.forms.LoginForm
 
 const openPopup = () => {
@@ -8,7 +8,7 @@ const openPopup = () => {
 };
 const closePopup = () => {
   popup.classList.remove("popup_opened");
-  document.removeEventListener("keydown", closeByEscape); //оптимизация удаление слушателя
+  document.removeEventListener("keydown", closeByEscape); //оптимизация удаление слушателя?
 };
 
 const closeByEscape = (evt) => {
@@ -17,6 +17,15 @@ const closeByEscape = (evt) => {
     closePopup(openedPopup);
   }
 };
+
+popup.addEventListener("mousedown", (evt) => {
+  if (evt.target.classList.contains("popup_opened")) {
+    closePopup(popup);
+  }
+  if (evt.target.classList.contains("popup__button-close")) {
+    closePopup(popup);
+  }
+});
 
 btns.forEach((btn) => {
   btn.addEventListener("click", openPopup);
