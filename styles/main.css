@@ -1,0 +1,42 @@
+.page {
+  margin: 0 auto;
+  max-width: 1512px;
+  font-family: "Inter", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+  color: #000;
+  background: #fff5ea;
+  font-style: normal;
+}
+
+img {
+  display: block;
+  pointer-events: none; /* не дает перемещать картинку */
+}
+
+a {
+  cursor: pointer;
+}
+.link {
+  color: #000;
+}
+.link:hover {
+  color: #9747ff;
+  transition: 0.3s;
+}
+input {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 122%;
+  padding: 2px 2px 2px 10px;
+  border: 2px solid #000000;
+}

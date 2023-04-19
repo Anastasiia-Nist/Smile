@@ -1,0 +1,334 @@
+.logo {
+  width: 92px;
+}
+
+.button-started {
+  width: 109px;
+  height: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 122%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #9747ff;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+}
+.button-started:hover {
+  background-color: #fffb47;
+  color: #000000;
+  transition: 0.3s;
+}
+
+.icon {
+  width: 32px;
+  transition: 0.5s;
+}
+.gamburger {
+  display: none;
+  cursor: pointer;
+}
+a:hover .icon {
+  transform: scale(1.2);
+}
+
+/* header */
+.header {
+  width: 100%;
+  padding: 60px 63px 0;
+  display: flex;
+  align-items: center;
+}
+.header__nav-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.header__nav-list {
+  display: flex;
+  gap: 76px;
+  padding-right: 50px;
+}
+.header__link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 122%;
+  text-align: center;
+  display: flex;
+}
+
+.header__link img {
+  padding-left: 10px;
+}
+
+/* intro */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+.intro__title {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 87%;
+  text-align: center;
+  max-width: 499px;
+}
+.intro__title span {
+  -webkit-text-stroke: 1px #000;
+  color: #fffb47;
+  text-shadow: 2px 2px 0px #000000;
+}
+.intro__text {
+  max-width: 366px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 122%;
+  text-align: center;
+  padding-bottom: 57px;
+  padding-top: 36px;
+
+}
+
+/* transfer */
+.transfer {
+  display: flex;
+  max-width: 82%;
+  align-items: center;
+  margin: 171px auto 0 146px;
+  gap: 55px;
+}
+.transfer__title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  max-width: 362px;
+}
+.transfer__container {
+  width: 65%;
+  height: 351px; /* не знаю как лучше */
+  background-color: #9747ff;
+  border: 4px solid #000000;
+  box-shadow: 12px 12px 0px #000000;
+}
+.transfer__container img {
+  margin: 30px 40px;
+  width: 20%;
+  position: relative;
+  transition: all 2s ease-in-out;
+  -webkit-transition: all 2s ease-in-out;
+}
+.transfer__container:hover img {
+  /* не знаю как лучше */
+  transform: translateX(34vw);
+  -webkit-transform: translateX(34vw);
+}
+
+.transfer__container p {
+  color: #ffffff;
+  font-family: "IBM Plex Mono";
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 87%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  font-feature-settings: "ss01" on, "ss03" on;
+}
+/* global */
+.global {
+  margin: 210px auto 0;
+  position: relative;
+}
+.global__text {
+  max-width: 730px;
+  margin: 0 auto 0 180px;
+}
+
+.global__title {
+  font-family: "IBM Plex Mono";
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 87%;
+  text-align: right;
+  position: sticky;
+  z-index: 1;
+  margin: 0;
+}
+.global__subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 87%;
+  text-align: right;
+  position: sticky;
+  z-index: 1;
+  padding: 36px 0 117px;
+}
+
+.global__link {
+  position: sticky;
+  text-decoration: underline;
+  text-align: right;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 87%;
+  z-index: 1;
+}
+.global__link img {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+.global__img {
+  position: absolute;
+  top: -162px;
+  right: 0;
+  max-width: 52%;
+  object-fit: contain;
+}
+
+/* time */
+.time {
+  margin: 317px auto 104px 146px;
+  display: flex;
+  gap: 60px;
+}
+.time__wrapper {
+  min-width: 394px;
+}
+.time__title {
+  font-family: "IBM Plex Mono";
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 87%;
+  text-align: right;
+  padding-top: 80px;
+  padding-bottom: 0;
+}
+.time__title mark {
+  background-color: #baffcd;
+  color: #37ab00;
+  padding-left: 24px;
+  padding-top: 0;
+}
+.time__subtitle {
+  padding: 36px 0 128px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 87%;
+}
+.time__container {
+  width: 33%;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  background: #fffb47;
+  border: 4px solid #000000;
+  box-shadow: 12px 12px 0px #000000;
+  position: relative;
+}
+.time__container:after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.time__container p {
+  position: absolute;
+  font-family: "IBM Plex Mono";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 87%;
+  text-align: center;
+  letter-spacing: -0.04em;
+}
+.time__container img {
+  width: 36%;
+}
+.time__container .img-dollar {
+  position: absolute;
+  top: 25%;
+  left: 36%;
+  transform: rotate(90deg);
+}
+.img-dollar_rotation {
+  position: absolute;
+  top: 27%;
+  left: 49%;
+  transform-origin: left bottom;
+  animation-name: rotation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotation {
+  0% {transform:rotate(0deg);}
+  100% {transform:rotate(360deg);}
+}
+.time_12 {
+  padding-top: 31px;
+  top: 0;
+  left: 50%;
+}
+.time_3 {
+  padding-right: 31px;
+  bottom: 50%;
+  right: 0;
+}
+.time_6 {
+  padding-bottom: 31px;
+  bottom: 0;
+  left: 50%;
+}
+.time_9 {
+  padding-left: 31px;
+  bottom: 50%;
+  left: 0;
+}
+
+/* footer */
+.footer {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 48px 110px 51px 62px;
+  background-color: #fff;
+  border: 2px solid #000000;
+  margin: 0;
+  justify-content: space-between;
+}
+.footer__nav-wrapper {
+  display: flex;
+  gap: 64px;
+}
+
+.footer__nav-block p {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 87%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  margin: 0 0 15px;
+  text-align: left;
+}
+.footer__nav-block li {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 87%;
+  letter-spacing: -0.04em;
+  margin-top: 8px;
+}
+.footer__icon-list {
+  display: flex;
+  justify-content: space-between;
+  min-width: 152px;
+}

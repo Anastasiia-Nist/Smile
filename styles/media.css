@@ -1,0 +1,187 @@
+@media screen and (max-width: 1480px) {
+  .global__text {
+    margin-left: 80px;
+  }
+  .global__subtitle {
+    text-align: left;
+  }
+  .global__link {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .transfer {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .transfer__title {
+    padding-top: 60px;
+  }
+  .global__subtitle {
+    padding-bottom: 60px;
+  }
+  .global__text {
+    margin-left: auto;
+  }
+  .global__link {
+    text-align: left;
+  }
+  .global__img {
+    top: 50px;
+    right: 100px;
+  }
+  .time {
+    margin-left: 0;
+    flex-direction: column;
+    margin-top: 300px;
+  }
+  .time__container {
+    margin-left: calc(100vw - (100vw - 40px));
+  }
+  .time__wrapper {
+    text-align: center;
+  }
+  .time__title {
+    text-align: center;
+  }
+  .footer {
+    padding: 48px 20px 51px 20px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .header {
+    justify-content: space-between;
+  }
+  .header__nav-wrapper {
+    display: none;
+  }
+  .gamburger {
+    display: block;
+  }
+  .transfer {
+    margin-top: 100px;
+  }
+  .transfer__container {
+    width: 80%;
+    height: 200px;
+  }
+  .transfer__container p {
+    font-weight: 400;
+    font-size: 44px;
+  }
+  .global {
+    margin-top: 100px;
+  }
+  .global__img {
+    display: none;
+  }
+  .global__title, .global__subtitle, .global__link {
+    text-align: center;
+  }
+  .global__subtitle {
+    padding-bottom: 30px;
+  }
+  .time {
+    margin-top: 100px;
+    gap: 30px;
+  }
+  .time__title {
+    font-weight: 400;
+    font-size: 44px;
+  }
+  .time__subtitle {
+    font-size: 19px;
+    padding-bottom: 50px;
+  }
+  .time__container p {
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .time_12 {
+    padding-top: 10px;
+  }
+  .time_3 {
+    padding-right: 10px;
+  }
+  .time_6 {
+    padding-bottom: 10px;
+  }
+  .time_9 {
+    padding-left: 10px;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+
+@media screen and (max-width: 560px) {
+  .header {
+    padding: 40px 33px 0;
+  }
+  .intro__title {
+    font-weight: 400;
+    font-size: 23px;
+  }
+  .intro__text {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 27px;
+    padding-top: 16px;
+  }
+  .transfer__container{
+    width: 90%;
+    height: 150px;
+  }
+  .transfer__container p {
+    font-weight: 400;
+    font-size: 24px;
+  }
+  .transfer__title {
+    font-weight: 400;
+    font-size: 30px;
+  }
+  .global__title {
+    font-weight: 400;
+    font-size: 34px;
+
+  }
+  .global__subtitle {
+    font-weight: 400;
+    font-size: 14px;
+
+  }
+  
+  .global__link {
+    font-size: 14px;
+
+  }
+
+  .time__title {
+    font-weight: 400;
+    font-size: 34px;
+
+  }
+  .time__wrapper {
+    min-width: 100%;
+  }
+  .time__subtitle {
+    font-size: 14px;
+
+    padding-bottom: 50px;
+  }
+  .footer__nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+  .footer__nav-block p, .footer__nav-block ul {
+    text-align: center;
+  }
+}

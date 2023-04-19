@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money transfer service</title>
     <link rel="stylesheet" href="./pages/index.css">
-    <script defer src="./script/script.js"></script>
+    <script defer src="./pages/index.js"></script>
 </head>
 <body class="page">
     <header class="header">
-        <img src="./images/Logo.svg" alt="Logo." class="logo">
+        <a><h1><img src="./images/Logo.svg" alt="Logo." class="logo"></h1></a>
+        <a class="gamburger"><img src="./images/hamburger_button_menu_icon_155296.svg" alt="menu"></a>
         <div class="header__nav-wrapper">
             <nav>
-                <ul class="list header__nav-list">
+                <ul class="header__nav-list">
                     <li><a href="#" class="link header__link">
                         <p>Service</p>
                         <img src="./images/V.svg" alt="Arrow.">
@@ -36,14 +37,15 @@
     </header>
     <main>
         <section class="intro">
-            <div class="intro__wrapper">
                 <p class="intro__title"><span>Start&nbsp;to&nbsp;take</span> a change.</p>
-            </div>
             <p class="intro__text">Instant,&nbsp;global,&nbsp;and&nbsp;cheap&nbsp;fees. What&nbsp;more&nbsp;could&nbsp;you&nbsp;asked&nbsp;for?</p>
             <button class="button-started">Get started</button>
         </section>
         <section class="transfer">
-            <img src="./images/Transfer.svg" alt="Money." class="transfer__img">
+            <div class="transfer__container">
+                <img class="img-dollar" src="./images/dollar.svg" alt="Dollar.">
+                <p>0.5% only</p>
+            </div>
             <h1 class="transfer__title">Cheap&nbsp;fees&nbsp;<b>transfer</b>, no fixed cents.</h1>
         </section>
         <section class="global">
@@ -57,37 +59,28 @@
             <img src="./images/Globe.png" alt="Earth." class="global__img">
         </section>
         <section class="time">
-            <img src="./images/Time.png" alt="Сlock." class="time__img">
+            <div class="time__container">
+                <img class="img-dollar" src="./images/dollar.svg" alt="Dollar.">
+                <img class="img-dollar_rotation" src="./images/dollar.svg" alt="Dollar.">
+                <p class="time_12">12</p>
+                <p class="time_3">3</p>
+                <p class="time_6">6</p>
+                <p class="time_9">9</p>
+            </div>
             <div class="time__wrapper">
                 <h2 class="time__title">Time is&#8201;<mark>money.</mark></h2>
                 <p class="time__subtitle">Real-time transfer and payouts WORLDWIDE!</p>
                 <button class="button-started">Get started</button>
             </div>
         </section>
-        <div class="popup">
-            <div class="popup__container">
-                <h2 class="popup__title">Welcome!</h2>
-                <form class="form" name="LoginForm" action="#" method="post" autocomplete="off" novalidate>
-                    <input type="text" class="form__input">
-                    <input type="email" class="form__input">
-                    <button class="form__button button">Sign Up</button>
-                </form>
-                <div class="popup__icon-list">
-                    <img src="./images/social/instagram.svg" alt="Instagram logo." class="icon">
-                    <img src="./images/social/linkedin.svg" alt="Linkedin logo." class="icon">
-                    <img src="./images/social/twitter.svg" alt="Twitter logo." class="icon">
-                </div>
-                <button class="popup__button-close">X</button>
-            </div>
-        </div>
     </main>
     <footer class="footer">
-        <img src="./images/Logo.svg" alt="Logo." class="logo">
+        <a><img src="./images/Logo.svg" alt="Logo." class="logo"></a>
         <nav>
-            <ul class="list footer__nav-wrapper">
+            <ul class=" footer__nav-wrapper">
                 <li class="footer__nav-block">
                     <p>Service</p>
-                    <ul class="list">
+                    <ul>
                         <li><a href="#" class="link">Personal</a></li>
                         <li><a href="#" class="link">Business</a></li>
                         <li><a href="#" class="link">Enterprise</a></li>
@@ -95,14 +88,14 @@
                 </li>
                 <li class="footer__nav-block">
                     <p>API</p>
-                    <ul class="list">
+                    <ul>
                         <li><a href="#" class="link">Developer contact</a></li>
                         <li><a href="#" class="link">Documentation</a></li>
                     </ul>
                 </li>
                 <li class="footer__nav-block">
                     <p>Company</p>
-                    <ul class="list">
+                    <ul>
                         <li><a href="#" class="link">About us</a></li>
                         <li><a href="#" class="link">Careers</a></li>
                         <li><a href="#" class="link">Investors</a></li>
@@ -111,10 +104,30 @@
             </ul>
         </nav>
         <div class="footer__icon-list">
-            <img src="./images/social/instagram.svg" alt="Instagram logo." class="icon">
-            <img src="./images/social/linkedin.svg" alt="Linkedin logo." class="icon">
-            <img src="./images/social/twitter.svg" alt="Twitter logo." class="icon">
+            <a><img src="./images/social/instagram.svg" alt="Instagram logo." class="icon"></a>
+            <a><img src="./images/social/linkedin.svg" alt="Linkedin logo." class="icon"></a>
+            <a><img src="./images/social/twitter.svg" alt="Twitter logo." class="icon"></a>
         </div> 
     </footer>
+    <div class="popup popup__login">
+        <div class="popup__container">
+            <h2 class="popup__title">Welcome!</h2>
+            <form class="form" name="LoginForm" action="#" method="post" autocomplete="off" novalidate>
+                <input type="text" class="form__input">
+                <input type="email" class="form__input">
+                <button class="form__button button">Sign Up</button>
+            </form>
+            <div class="popup__icon-list">
+                <a><img src="./images/social/instagram.svg" alt="Instagram logo." class="icon"></a>
+                <a><img src="./images/social/linkedin.svg" alt="Linkedin logo." class="icon"></a>
+                <a><img src="./images/social/twitter.svg" alt="Twitter logo." class="icon"></a>
+            </div>
+            <button class="popup__button-close">X</button>
+        </div>
+    </div>
+    <div class="popup popup__gamburger">
+        <div class="popup__container popup__container_gamburger">
+        </div>
+    </div>
 </body>
 </html>
