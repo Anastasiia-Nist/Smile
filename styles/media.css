@@ -117,6 +117,12 @@
     flex-direction: column;
     gap: 30px;
   }
+
+  .form__input {
+    margin-bottom: 16px;
+    height: 40px;
+    width: 70%;
+  }
 }
 
 
