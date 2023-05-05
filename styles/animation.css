@@ -1,0 +1,25 @@
+@keyframes transl {
+  0% {
+    left: 40px;
+  }
+  100% {
+    left: 74%;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationEarth {
+  0% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
+}

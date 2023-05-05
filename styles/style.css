@@ -3,8 +3,7 @@
 }
 
 .button-started {
-  width: 109px;
-  height: 40px;
+  padding: 10px 10px;
   font-weight: 700;
   font-size: 16px;
   line-height: 122%;
@@ -27,6 +26,12 @@
 .gamburger {
   display: none;
   cursor: pointer;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+}
+.gamburger span {
+  font-size: 40px;
 }
 a:hover .icon {
   transform: scale(1.2);
@@ -49,12 +54,20 @@ a:hover .icon {
   gap: 76px;
   padding-right: 50px;
 }
+.header__link svg {
+  fill: #000;
+}
+.header__link svg:hover {
+  fill: #9747ff;
+}
 .header__link {
   font-weight: 400;
   font-size: 16px;
   line-height: 122%;
   text-align: center;
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .header__link img {
@@ -68,6 +81,7 @@ a:hover .icon {
   justify-content: center;
   align-items: center;
   margin-top: 80px;
+  gap: 40px;
 }
 .intro__title {
   font-family: "IBM Plex Mono";
@@ -76,22 +90,20 @@ a:hover .icon {
   font-size: 64px;
   line-height: 87%;
   text-align: center;
-  max-width: 499px;
+  max-width: 600px;
 }
-.intro__title span {
+.intro__title span:first-child {
   -webkit-text-stroke: 1px #000;
   color: #fffb47;
   text-shadow: 2px 2px 0px #000000;
 }
 .intro__text {
-  max-width: 366px;
+  max-width: 386px;
   font-weight: 400;
   font-size: 24px;
   line-height: 122%;
   text-align: center;
-  padding-bottom: 57px;
-  padding-top: 36px;
-
+  padding: 0 10px 15px;
 }
 
 /* transfer */
@@ -107,7 +119,7 @@ a:hover .icon {
   font-size: 40px;
   line-height: 100%;
   letter-spacing: -0.04em;
-  max-width: 362px;
+  max-width: 400px;
 }
 .transfer__container {
   width: 65%;
@@ -115,18 +127,17 @@ a:hover .icon {
   background-color: #9747ff;
   border: 4px solid #000000;
   box-shadow: 12px 12px 0px #000000;
-}
-.transfer__container img {
-  margin: 30px 40px;
-  width: 20%;
   position: relative;
-  transition: all 2s ease-in-out;
-  -webkit-transition: all 2s ease-in-out;
+  display: flex;
 }
-.transfer__container:hover img {
-  /* не знаю как лучше */
-  transform: translateX(34vw);
-  -webkit-transform: translateX(34vw);
+
+.transfer__container img {
+  position: absolute;
+  left: 40px;
+  top: 30px;
+  width: 20%;
+  animation: transl 4s infinite linear;
+  animation-direction: alternate;
 }
 
 .transfer__container p {
@@ -136,6 +147,8 @@ a:hover .icon {
   font-size: 64px;
   line-height: 87%;
   text-align: center;
+  align-self: flex-end;
+  margin: 0 auto 100px;
   letter-spacing: -0.04em;
   font-feature-settings: "ss01" on, "ss03" on;
 }
@@ -147,6 +160,9 @@ a:hover .icon {
 .global__text {
   max-width: 730px;
   margin: 0 auto 0 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
 }
 
 .global__title {
@@ -166,7 +182,6 @@ a:hover .icon {
   text-align: right;
   position: sticky;
   z-index: 1;
-  padding: 36px 0 117px;
 }
 
 .global__link {
@@ -183,14 +198,54 @@ a:hover .icon {
   margin-right: 10px;
   display: inline-block;
 }
-.global__img {
+
+.global__container {
+  width: 440px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  background: blue;
+  border: 4px solid #000000;
+  box-shadow: 12px 12px 0px #000000;
   position: absolute;
-  top: -162px;
-  right: 0;
-  max-width: 52%;
-  object-fit: contain;
+  top: 0;
+  right: 70px;
+}
+.global__container:after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.global__container-arrow {
+  width: 440px;
+  position: absolute;
+  top: 0;
+  right: 60px;
+  z-index: 2;
+}
+.global__container-animation {
+  animation: rotationEarth 0.1s linear infinite alternate;
+}
+.global__container-earth1 {
+  width: 230px;
+  position: absolute;
+  top: 220px;
+  right: 180px;
 }
 
+.global__container-earth2 {
+  width: 190px;
+  position: absolute;
+  top: 30px;
+  right: 130px;
+}
+.global__container-earth3 {
+  width: 100px;
+  position: absolute;
+  top: 100px;
+  right: 370px;
+}
 /* time */
 .time {
   margin: 317px auto 104px 146px;
@@ -199,6 +254,10 @@ a:hover .icon {
 }
 .time__wrapper {
   min-width: 394px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
 }
 .time__title {
   font-family: "IBM Plex Mono";
@@ -207,19 +266,18 @@ a:hover .icon {
   line-height: 87%;
   text-align: right;
   padding-top: 80px;
-  padding-bottom: 0;
 }
-.time__title mark {
+/* .time__title mark {
   background-color: #baffcd;
   color: #37ab00;
   padding-left: 24px;
   padding-top: 0;
-}
+} */
 .time__subtitle {
-  padding: 36px 0 128px;
   font-weight: 400;
   font-size: 24px;
   line-height: 87%;
+  padding-bottom: 90px;
 }
 .time__container {
   width: 33%;
@@ -265,10 +323,7 @@ a:hover .icon {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-@keyframes rotation {
-  0% {transform:rotate(0deg);}
-  100% {transform:rotate(360deg);}
-}
+
 .time_12 {
   padding-top: 31px;
   top: 0;

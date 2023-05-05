@@ -10,22 +10,28 @@
 </head>
 <body class="page">
     <header class="header">
-        <a><h1><img src="./images/Logo.svg" alt="Logo." class="logo"></h1></a>
-        <a class="gamburger"><img src="./images/hamburger_button_menu_icon_155296.svg" alt="menu"></a>
+        <a href="#"><h1><img src="./images/Logo.svg" alt="Money transfer service. Logo" class="logo"></h1></a>
+        <button class="gamburger"><span>&#9776;</span></button>
         <div class="header__nav-wrapper">
             <nav>
                 <ul class="header__nav-list">
                     <li><a href="#" class="link header__link">
                         <p>Service</p>
-                        <img src="./images/V.svg" alt="Arrow.">
+                        <svg class="svg" width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.94 0.529999L4 3.58333L7.06 0.529999L8 1.47L4 5.47L0 1.47L0.94 0.529999Z" />
+                        </svg>    
                     </a></li>
                     <li><a href="#" class="link header__link">
                         <p>API</p>
-                        <img src="./images/V.svg" alt="Arrow.">
+                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.94 0.529999L4 3.58333L7.06 0.529999L8 1.47L4 5.47L0 1.47L0.94 0.529999Z" />
+                            </svg>
                     </a></li>
                     <li><a href="#" class="link header__link">
                         <p>Company</p>
-                        <img src="./images/V.svg" alt="Arrow.">
+                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.94 0.529999L4 3.58333L7.06 0.529999L8 1.47L4 5.47L0 1.47L0.94 0.529999Z" />
+                            </svg>
                     </a></li>
                     <li><a href="#" class="link header__link">
                         <p>Pricing</p>
@@ -35,10 +41,10 @@
             <button class="button-started">Get started</button>
         </div>
     </header>
-    <main>
+    <main >
         <section class="intro">
-                <p class="intro__title"><span>Start&nbsp;to&nbsp;take</span> a change.</p>
-            <p class="intro__text">Instant,&nbsp;global,&nbsp;and&nbsp;cheap&nbsp;fees. What&nbsp;more&nbsp;could&nbsp;you&nbsp;asked&nbsp;for?</p>
+                <p class="intro__title"><span>Start to take</span> <span>a&nbsp;change.</span></p>
+            <p class="intro__text">Instant,&nbsp;global, and&nbsp;cheap&nbsp;fees. What&nbsp;more&nbsp;could you&nbsp;asked&nbsp;for?</p>
             <button class="button-started">Get started</button>
         </section>
         <section class="transfer">
@@ -46,7 +52,7 @@
                 <img class="img-dollar" src="./images/dollar.svg" alt="Dollar.">
                 <p>0.5% only</p>
             </div>
-            <h1 class="transfer__title">Cheap&nbsp;fees&nbsp;<b>transfer</b>, no fixed cents.</h1>
+            <h1 class="transfer__title">Cheap&nbsp;fees <b>transfer</b>, no fixed cents.</h1>
         </section>
         <section class="global">
             <div class="global__text">
@@ -56,7 +62,11 @@
                     <p>See supported countries<img src="./images/link.svg" alt="Arrow."></p>
                 </a>
             </div>
-            <img src="./images/Globe.png" alt="Earth." class="global__img">
+            <div class="global__container"></div>
+            <img class="global__container-arrow" src="./images/EarthArrow.svg" alt="Earth Arrow.">
+            <img class="global__container-earth1 global__container-animation" src="./images/Earth1.svg" alt="Earth.">
+            <img class="global__container-earth2 global__container-animation" src="./images/Earth2.svg" alt="Earth.">
+            <img class="global__container-earth3 global__container-animation" src="./images/Earth3.svg" alt="Earth.">
         </section>
         <section class="time">
             <div class="time__container">
@@ -68,7 +78,7 @@
                 <p class="time_9">9</p>
             </div>
             <div class="time__wrapper">
-                <h2 class="time__title">Time is&#8201;<mark>money.</mark></h2>
+                <h2 class="time__title">Time is&#8201;<span>money.</span></h2>
                 <p class="time__subtitle">Real-time transfer and payouts WORLDWIDE!</p>
                 <button class="button-started">Get started</button>
             </div>
@@ -76,7 +86,7 @@
     </main>
     <footer class="footer">
         <a><img src="./images/Logo.svg" alt="Logo." class="logo"></a>
-        <nav>
+        <nav class="footer-nav">
             <ul class=" footer__nav-wrapper">
                 <li class="footer__nav-block">
                     <p>Service</p>
@@ -113,9 +123,9 @@
         <div class="popup__container">
             <h2 class="popup__title">Welcome!</h2>
             <form class="form" name="LoginForm" action="#" method="post" autocomplete="off" novalidate>
-                <input type="text" class="form__input">
-                <input type="email" class="form__input">
-                <button class="form__button button">Sign Up</button>
+                <input type="text" class="form__input" placeholder="Login">
+                <input type="email" class="form__input" placeholder="Password">
+                <button class="form__button button" type="summit">Sign Up</button>
             </form>
             <div class="popup__icon-list">
                 <a><img src="./images/social/instagram.svg" alt="Instagram logo." class="icon"></a>

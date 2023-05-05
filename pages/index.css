@@ -1,6 +1,7 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts/Inter/inter.css);
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap');
+@import url(../styles/animation.css);
 @import url(../styles/reset.css);
 @import url(../styles/main.css);
 @import url(../styles/style.css);

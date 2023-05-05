@@ -10,17 +10,42 @@
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1300px) {
   .transfer {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
   }
-  .transfer__title {
+  /* .transfer__title {
     padding-top: 60px;
-  }
-  .global__subtitle {
+  } */
+  /* .global__subtitle {
     padding-bottom: 60px;
+  } */
+  .global__container {
+    width: 350px;
+    top: 100px;
+  }
+
+  .global__container-arrow {
+    width: 350px;
+    top: 100px;
+  }
+  .global__container-earth1 {
+    width: 160px;
+    top: 300px;
+    right: 160px;
+  }
+
+  .global__container-earth2 {
+    width: 140px;
+    top: 140px;
+    right: 100px;
+  }
+  .global__container-earth3 {
+    width: 80px;
+    top: 190px;
+    right: 290px;
   }
   .global__text {
     margin-left: auto;
@@ -58,32 +83,66 @@
   .header__nav-wrapper {
     display: none;
   }
+  .logo {
+    width: 46px;
+  }
   .gamburger {
     display: block;
+  }
+  .button-started {
+    padding: 14px 40px;
   }
   .transfer {
     margin-top: 100px;
   }
   .transfer__container {
     width: 80%;
-    height: 200px;
+    height: 250px;
   }
   .transfer__container p {
     font-weight: 400;
-    font-size: 44px;
+    font-size: 40px;
+    margin-bottom: 40px;
   }
-  .global {
-    margin-top: 100px;
-  }
-  .global__img {
-    display: none;
-  }
-  .global__title, .global__subtitle, .global__link {
+  .transfer__title {
     text-align: center;
   }
-  .global__subtitle {
-    padding-bottom: 30px;
+  .global {
+    margin-top: 360px;
   }
+  .global__container {
+    width: 250px;
+    top: -300px;
+  }
+
+  .global__container-arrow {
+    width: 250px;
+    top: -300px;
+  }
+  .global__container-earth1 {
+    width: 120px;
+    top: -170px;
+    right: 120px;
+  }
+
+  .global__container-earth2 {
+    width: 110px;
+    top: -290px;
+    right: 100px;
+  }
+  .global__container-earth3 {
+    width: 50px;
+    top: -220px;
+    right: 240px;
+  }
+  .global__title,
+  .global__subtitle,
+  .global__link {
+    text-align: center;
+  }
+  /* .global__subtitle {
+    padding-bottom: 30px;
+  } */
   .time {
     margin-top: 100px;
     gap: 30px;
@@ -93,12 +152,14 @@
     font-size: 44px;
   }
   .time__subtitle {
-    font-size: 19px;
     padding-bottom: 50px;
+  }
+  .time__container {
+    width: 250px;
   }
   .time__container p {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .time_12 {
@@ -125,29 +186,38 @@
   }
 }
 
-
 @media screen and (max-width: 560px) {
   .header {
     padding: 40px 33px 0;
   }
-  .intro__title {
+  .intro__title span:last-child {
     font-weight: 400;
-    font-size: 23px;
+    font-size: 40px;
   }
   .intro__text {
     font-weight: 400;
-    font-size: 14px;
     text-align: center;
-    padding-bottom: 27px;
-    padding-top: 16px;
   }
-  .transfer__container{
+  .transfer__container {
     width: 90%;
-    height: 150px;
+    height: 180px;
+  }
+  .transfer__container img {
+    width: 60px;
+    animation: transl 4s infinite linear;
+    animation-direction: alternate;
+  }
+  @keyframes transl {
+    0% {
+      left: 10px;
+    }
+    100% {
+      left: 70%;
+    }
   }
   .transfer__container p {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 28px;
   }
   .transfer__title {
     font-weight: 400;
@@ -155,31 +225,27 @@
   }
   .global__title {
     font-weight: 400;
-    font-size: 34px;
-
+    font-size: 40px;
   }
   .global__subtitle {
     font-weight: 400;
-    font-size: 14px;
-
+    font-size: 24px;
   }
-  
-  .global__link {
-    font-size: 14px;
 
+  .global__link {
+    font-size: 20px;
   }
 
   .time__title {
     font-weight: 400;
-    font-size: 34px;
-
   }
+
   .time__wrapper {
     min-width: 100%;
+    align-items: center;
   }
   .time__subtitle {
-    font-size: 14px;
-
+    font-size: 18px;
     padding-bottom: 50px;
   }
   .footer__nav-wrapper {
@@ -187,7 +253,8 @@
     flex-direction: column;
     gap: 34px;
   }
-  .footer__nav-block p, .footer__nav-block ul {
+  .footer__nav-block p,
+  .footer__nav-block ul {
     text-align: center;
   }
 }
