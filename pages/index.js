@@ -56,7 +56,7 @@ const EventListenerGamburgerMenu = () => {
 const innerFooter = () => {
   container.innerHTML = footerNav.innerHTML;
   container.classList.add("container__mobile");
-  container.style.cssText = "padding-top: 80px; justify-content: space-around;";
+  container.style.cssText = "justify-content: space-around;";
   const btnClose = document.createElement("button");
   btnClose.classList.add("popup__button-close");
   const btnCloseText = document.createTextNode("X");
