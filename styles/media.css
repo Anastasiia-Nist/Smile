@@ -79,6 +79,7 @@
 @media screen and (max-width: 880px) {
   .header {
     justify-content: space-between;
+    padding: 20px 23px 0;
   }
   .header__nav-wrapper {
     display: none;
