@@ -111,6 +111,9 @@
   .global {
     margin-top: 360px;
   }
+  .global__text {
+    align-items: center;
+  }
   .global__container {
     width: 250px;
     top: -300px;

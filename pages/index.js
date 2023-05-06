@@ -41,22 +41,21 @@ popups.forEach((popup) => {
 btns.forEach((btn) => {
   btn.addEventListener("click", () => openPopup(popupLogin));
 });
-// отправка формы
+// отправка формы без перезагрузки
 const preventDefault = (evt) => {
   evt.preventDefault();
   closePopup(popupLogin);
 };
 //Открытие попапа гамбургера
-const EventListenerGamburgerMenu = () => {
+const setEventListenerGamburgerMenu = () => {
   openPopup(popupGamburger);
-  innerFooter();
-  container.addEventListener("click", popupGamdurgerCloseIfButtonStartedClick); //слушатель на кнопку старта, чтобы закрыть попап
+  copyFooterInnerText();
+  container.addEventListener("click", handleButtonStartedFromPopupGamdurger);
 };
 //копирование текста из footer
-const innerFooter = () => {
+const copyFooterInnerText = () => {
   container.innerHTML = footerNav.innerHTML;
   container.classList.add("container__mobile");
-  container.style.cssText = "justify-content: space-around;";
   const btnClose = document.createElement("button");
   btnClose.classList.add("popup__button-close");
   const btnCloseText = document.createTextNode("X");
@@ -66,16 +65,16 @@ const innerFooter = () => {
   container.appendChild(btns1);
 };
 //слушатель на кнопку старта, чтобы закрыть попап
-const popupGamdurgerCloseIfButtonStartedClick = (evt) => {
+const handleButtonStartedFromPopupGamdurger = (evt) => {
   if (evt.target.classList.contains("button-started")) {
     closePopup(popupGamburger);
     container.removeEventListener(
       "click",
-      popupGamdurgerCloseIfButtonStartedClick
-    ); //удаляем лишний слушатель
+      handleButtonStartedFromPopupGamdurger
+    );
   }
 };
 
 //слушатели на странице
 loginForm.addEventListener("submit", preventDefault);
-gamburger.addEventListener("click", EventListenerGamburgerMenu);
+gamburger.addEventListener("click", setEventListenerGamburgerMenu);

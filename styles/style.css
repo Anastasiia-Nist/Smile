@@ -54,12 +54,7 @@ a:hover .icon {
   gap: 76px;
   padding-right: 50px;
 }
-.header__link svg {
-  fill: #000;
-}
-.header__link svg:hover {
-  fill: #9747ff;
-}
+
 .header__link {
   font-weight: 400;
   font-size: 16px;
@@ -162,9 +157,16 @@ a:hover .icon {
   margin: 0 auto 0 180px;
   display: flex;
   flex-direction: column;
+  align-items:start;
   gap: 33px;
 }
-
+.global__text svg {
+  fill: #000;
+  margin-left: 10px;
+}
+.global__text svg:hover {
+  fill: #9747ff;
+}
 .global__title {
   font-family: "IBM Plex Mono";
   font-weight: 700;
@@ -193,12 +195,6 @@ a:hover .icon {
   line-height: 87%;
   z-index: 1;
 }
-.global__link img {
-  margin-left: 10px;
-  margin-right: 10px;
-  display: inline-block;
-}
-
 .global__container {
   width: 440px;
   border-radius: 50%;
@@ -309,25 +305,23 @@ a:hover .icon {
 }
 .time__container .img-dollar {
   position: absolute;
-  top: 25%;
-  left: 36%;
-  transform: rotate(90deg);
+  top: 22%;
+  left: 33%;
+  transform: rotate(270deg);
 }
 .img-dollar_rotation {
   position: absolute;
-  top: 27%;
-  left: 49%;
-  transform-origin: left bottom;
-  animation-name: rotation;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  top: 38%;
+  left: 50%;
+  transform-origin: 6% 52%;
+  animation: rotation 10s infinite linear;
+  z-index: 2;
 }
 
 .time_12 {
   padding-top: 31px;
   top: 0;
-  left: 50%;
+  left: 46%;
 }
 .time_3 {
   padding-right: 31px;

@@ -72,8 +72,9 @@
   align-items: center;
   justify-content: space-evenly;
 }
-.container__mobile ul {
+.container__mobile ul:first-child {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   padding: 0;
 }
