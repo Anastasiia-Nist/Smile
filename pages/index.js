@@ -9,19 +9,18 @@ const header = document.querySelector(".header");
 const loginForm = document.forms.LoginForm;
 const passwordControl = document.querySelector(".password-control");
 
-//открыть попап
 const openPopup = (popup) => {
   popup.classList.add("popup_opened");
   blockedScroll();
   document.addEventListener("keydown", closeByEscape);
 };
-// закрыть попап
+
 const closePopup = (popup) => {
   popup.classList.remove("popup_opened");
   anBlockedScroll();
   document.removeEventListener("keydown", closeByEscape);
 };
-//закрытие Escape
+
 const closeByEscape = (evt) => {
   if (evt.key === "Escape") {
     const openedPopup = document.querySelector(".popup_opened");
@@ -39,7 +38,7 @@ popups.forEach((popup) => {
     }
   });
 });
-// форма
+
 const preventDefault = (evt) => {
   evt.preventDefault();
   closePopup(popupLogin);
@@ -51,7 +50,7 @@ function blockedScroll() {
 function anBlockedScroll() {
   document.body.classList.remove("page-lock");
 }
-//
+
 function showPassword(evt) {
   const input = document.getElementById("password-input");
   if (input.getAttribute("type") == "password") {

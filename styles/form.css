@@ -32,15 +32,17 @@
 .form__section-password {
   position: relative;
 }
-.password-control{
-    position: absolute;
-    top: 11px;
-    right: 6px;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url(./../images/view_find_review_watch_look_vision_eye_icon_219352.svg) 0 0 no-repeat;
+.password-control {
+  position: absolute;
+  top: 11px;
+  right: 6px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(./../images/view_find_review_watch_look_vision_eye_icon_219352.svg)
+    0 0 no-repeat;
 }
 .password-control.view {
-	background: url(./../images/privacy_safety_spy_secure_private_protection_security_icon_219371.svg) 0 0 no-repeat;
+  background: url(./../images/privacy_safety_spy_secure_private_protection_security_icon_219371.svg)
+    0 0 no-repeat;
 }

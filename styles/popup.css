@@ -6,10 +6,10 @@
   height: 100%;
   z-index: 5;
 }
-.popup__login {  
+.popup__login {
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   background-color: transparent;
   position: fixed;
   top: 0;

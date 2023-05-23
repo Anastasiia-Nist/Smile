@@ -1,6 +1,5 @@
-
 @media screen and (max-width: 1480px) {
-  .global__text { 
+  .global__text {
     margin-left: 60px;
   }
 }
@@ -109,7 +108,7 @@
   }
   .global__container-earth3 {
     width: 60px;
-    right: 190px
+    right: 190px;
   }
   .time {
     margin-top: 100px;
