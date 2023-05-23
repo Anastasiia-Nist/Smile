@@ -18,22 +18,23 @@
   color: #000000;
   transition: 0.3s;
 }
-
-.icon {
-  width: 32px;
-  transition: 0.5s;
-}
-.gamburger {
+.burger {
   display: none;
   cursor: pointer;
   padding: 5px;
   background-color: transparent;
   border: none;
 }
-.gamburger span {
+.burger span {
   font-size: 40px;
 }
-a:hover .icon {
+.icon {
+  width: 32px;
+}
+.icon-link {
+  transition: 0.5s;
+}
+.icon-link:hover {
   transform: scale(1.2);
 }
 
@@ -44,7 +45,7 @@ a:hover .icon {
   display: flex;
   align-items: center;
 }
-.header__nav-wrapper {
+.header__nav-desktop {
   display: flex;
   align-items: center;
   margin-left: auto;
@@ -65,10 +66,35 @@ a:hover .icon {
   gap: 10px;
 }
 
-.header__link img {
-  padding-left: 10px;
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  border: 8px solid #000;
+}
+.nav-mobile.popup_opened {
+  left: 0;
+}
+.page.page-lock {
+  overflow: hidden;
 }
 
+.nav-mobile__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.nav-mobile__item {
+  font-size: 30px;
+}
 /* intro */
 .intro {
   display: flex;
@@ -77,6 +103,7 @@ a:hover .icon {
   align-items: center;
   margin-top: 80px;
   gap: 40px;
+  scroll-margin: 30px;
 }
 .intro__title {
   font-family: "IBM Plex Mono";
@@ -106,7 +133,7 @@ a:hover .icon {
   display: flex;
   max-width: 82%;
   align-items: center;
-  margin: 171px auto 0 146px;
+  margin: 171px auto 0;
   gap: 55px;
 }
 .transfer__title {
@@ -117,6 +144,7 @@ a:hover .icon {
   max-width: 400px;
 }
 .transfer__container {
+  max-width: 800px;
   width: 65%;
   height: 351px; /* не знаю как лучше */
   background-color: #9747ff;
@@ -126,7 +154,7 @@ a:hover .icon {
   display: flex;
 }
 
-.transfer__container img {
+.transfer__img-dollar {
   position: absolute;
   left: 40px;
   top: 30px;
@@ -135,7 +163,7 @@ a:hover .icon {
   animation-direction: alternate;
 }
 
-.transfer__container p {
+.transfer__paragraph {
   color: #ffffff;
   font-family: "IBM Plex Mono";
   font-weight: 700;
@@ -150,29 +178,29 @@ a:hover .icon {
 /* global */
 .global {
   margin: 210px auto 0;
-  position: relative;
+  scroll-margin: 30px;
+  display: flex;
 }
 .global__text {
   max-width: 730px;
   margin: 0 auto 0 180px;
   display: flex;
   flex-direction: column;
-  align-items:start;
+  align-items: end;
   gap: 33px;
 }
-.global__text svg {
+.global__svg {
   fill: #000;
   margin-left: 10px;
 }
-.global__text svg:hover {
-  fill: #9747ff;
+.global__svg:hover {
+  fill: currentColor;
 }
 .global__title {
   font-family: "IBM Plex Mono";
   font-weight: 700;
   font-size: 64px;
   line-height: 87%;
-  text-align: right;
   position: sticky;
   z-index: 1;
   margin: 0;
@@ -181,7 +209,6 @@ a:hover .icon {
   font-weight: 400;
   font-size: 24px;
   line-height: 87%;
-  text-align: right;
   position: sticky;
   z-index: 1;
 }
@@ -189,11 +216,11 @@ a:hover .icon {
 .global__link {
   position: sticky;
   text-decoration: underline;
-  text-align: right;
   font-weight: 400;
   font-size: 24px;
   line-height: 87%;
   z-index: 1;
+  width: fit-content;
 }
 .global__container {
   width: 440px;
@@ -204,9 +231,12 @@ a:hover .icon {
   background: blue;
   border: 4px solid #000000;
   box-shadow: 12px 12px 0px #000000;
-  position: absolute;
+}
+.global__img {
+  position: relative;
   top: 0;
   right: 70px;
+  max-width: 440px;
 }
 .global__container:after {
   content: "";
@@ -217,36 +247,39 @@ a:hover .icon {
   width: 440px;
   position: absolute;
   top: 0;
-  right: 60px;
+  right: 0;
   z-index: 2;
 }
-.global__container-animation {
-  animation: rotationEarth 0.1s linear infinite alternate;
-}
+
 .global__container-earth1 {
   width: 230px;
   position: absolute;
   top: 220px;
-  right: 180px;
+  right: 110px;
 }
 
 .global__container-earth2 {
   width: 190px;
   position: absolute;
   top: 30px;
-  right: 130px;
+  right: 60px;
 }
 .global__container-earth3 {
   width: 100px;
   position: absolute;
   top: 100px;
-  right: 370px;
+  right: 300px;
+}
+.global__container-animation {
+  animation: rotationEarth 0.1s linear infinite alternate;
 }
 /* time */
 .time {
-  margin: 317px auto 104px 146px;
+  margin: 210px auto 104px;
   display: flex;
+  justify-content: center;
   gap: 60px;
+  scroll-margin: 30px;
 }
 .time__wrapper {
   min-width: 394px;
@@ -263,20 +296,18 @@ a:hover .icon {
   text-align: right;
   padding-top: 80px;
 }
-/* .time__title mark {
+.time__title .mark {
   background-color: #baffcd;
   color: #37ab00;
-  padding-left: 24px;
-  padding-top: 0;
-} */
+}
 .time__subtitle {
   font-weight: 400;
   font-size: 24px;
-  line-height: 87%;
+  line-height: 24px;
   padding-bottom: 90px;
 }
 .time__container {
-  width: 33%;
+  width: 440px;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -291,7 +322,7 @@ a:hover .icon {
   display: block;
   padding-top: 100%;
 }
-.time__container p {
+.time__paragraph {
   position: absolute;
   font-family: "IBM Plex Mono";
   font-weight: 700;
@@ -300,16 +331,15 @@ a:hover .icon {
   text-align: center;
   letter-spacing: -0.04em;
 }
-.time__container img {
-  width: 36%;
-}
 .time__container .img-dollar {
+  width: 36%;
   position: absolute;
   top: 22%;
   left: 33%;
   transform: rotate(270deg);
 }
 .img-dollar_rotation {
+  width: 36%;
   position: absolute;
   top: 38%;
   left: 50%;
@@ -351,12 +381,12 @@ a:hover .icon {
   margin: 0;
   justify-content: space-between;
 }
-.footer__nav-wrapper {
+.footer__nav-list {
   display: flex;
   gap: 64px;
 }
 
-.footer__nav-block p {
+.footer__paragraph {
   font-family: "IBM Plex Mono";
   font-style: normal;
   font-weight: 700;
@@ -367,7 +397,7 @@ a:hover .icon {
   margin: 0 0 15px;
   text-align: left;
 }
-.footer__nav-block li {
+.footer__nav-block-item {
   font-family: "IBM Plex Mono";
   font-style: normal;
   font-weight: 400;

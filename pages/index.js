@@ -1,23 +1,25 @@
 const popups = document.querySelectorAll(".popup");
 const popupLogin = document.querySelector(".popup__login");
-const popupGamburger = document.querySelector(".popup__gamburger");
-const btns = document.querySelectorAll(".button-started");
+const popupBurger = document.querySelector(".nav-mobile");
+const btnsStarted = document.querySelectorAll(".button-started");
+const btnBurger = document.querySelector(".burger");
+const navMobile = document.querySelector(".nav-mobile");
+const mobileNavList = document.querySelectorAll(".nav-mobile__item");
+const header = document.querySelector(".header");
 const loginForm = document.forms.LoginForm;
-const gamburger = document.querySelector(".gamburger");
-const footerNav = document.querySelector(".footer-nav");
-const container = document.querySelector(".popup__container_gamburger");
+const passwordControl = document.querySelector(".password-control");
 
 //открыть попап
 const openPopup = (popup) => {
   popup.classList.add("popup_opened");
-  document.body.style.overflow = "hidden"; //скрыла прокрутку
+  blockedScroll();
   document.addEventListener("keydown", closeByEscape);
 };
 // закрыть попап
 const closePopup = (popup) => {
   popup.classList.remove("popup_opened");
-  document.body.style.overflow = "";
-  document.removeEventListener("keydown", closeByEscape); //оптимизация удаление слушателя?
+  anBlockedScroll();
+  document.removeEventListener("keydown", closeByEscape);
 };
 //закрытие Escape
 const closeByEscape = (evt) => {
@@ -37,44 +39,38 @@ popups.forEach((popup) => {
     }
   });
 });
-// button-started
-btns.forEach((btn) => {
-  btn.addEventListener("click", () => openPopup(popupLogin));
-});
-// отправка формы без перезагрузки
+// форма
 const preventDefault = (evt) => {
   evt.preventDefault();
   closePopup(popupLogin);
 };
-//Открытие попапа гамбургера
-const setEventListenerGamburgerMenu = () => {
-  openPopup(popupGamburger);
-  copyFooterInnerText();
-  container.addEventListener("click", handleButtonStartedFromPopupGamdurger);
-};
-//копирование текста из footer
-const copyFooterInnerText = () => {
-  container.innerHTML = footerNav.innerHTML;
-  container.classList.add("container__mobile");
-  const btnClose = document.createElement("button");
-  btnClose.classList.add("popup__button-close");
-  const btnCloseText = document.createTextNode("X");
-  btnClose.appendChild(btnCloseText);
-  container.appendChild(btnClose);
-  const btns1 = document.querySelector(".button-started");
-  container.appendChild(btns1);
-};
-//слушатель на кнопку старта, чтобы закрыть попап
-const handleButtonStartedFromPopupGamdurger = (evt) => {
-  if (evt.target.classList.contains("button-started")) {
-    closePopup(popupGamburger);
-    container.removeEventListener(
-      "click",
-      handleButtonStartedFromPopupGamdurger
-    );
+
+function blockedScroll() {
+  document.body.classList.add("page-lock");
+}
+function anBlockedScroll() {
+  document.body.classList.remove("page-lock");
+}
+//
+function showPassword(evt) {
+  const input = document.getElementById("password-input");
+  if (input.getAttribute("type") == "password") {
+    evt.target.classList.add("view");
+    input.setAttribute("type", "text");
+  } else {
+    evt.target.classList.remove("view");
+    input.setAttribute("type", "password");
   }
-};
+  //return false;
+}
 
 //слушатели на странице
+btnsStarted.forEach((btn) => {
+  btn.addEventListener("click", () => openPopup(popupLogin));
+});
+btnBurger.addEventListener("click", () => openPopup(popupBurger));
+mobileNavList.forEach((item) => {
+  item.addEventListener("click", () => closePopup(popupBurger));
+});
 loginForm.addEventListener("submit", preventDefault);
-gamburger.addEventListener("click", setEventListenerGamburgerMenu);
+passwordControl.addEventListener("click", showPassword);

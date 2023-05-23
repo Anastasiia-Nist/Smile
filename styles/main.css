@@ -1,13 +1,12 @@
 .page {
   margin: 0 auto;
-  /* max-width: 1512px; */
+  width: 100%;
   font-family: "Inter", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
-  min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   line-height: 1.5;
@@ -15,17 +14,17 @@
   background: #fff5ea;
   font-style: normal;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 img {
   display: block;
   pointer-events: none; /* не дает перемещать картинку */
 }
 
-a {
-  cursor: pointer;
-}
 .link {
   color: #000;
+  cursor: pointer;
 }
 .link:hover {
   color: #9747ff;

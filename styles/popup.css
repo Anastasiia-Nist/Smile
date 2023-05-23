@@ -1,26 +1,25 @@
 .popup {
-  display: flex;
   opacity: 0;
   visibility: hidden;
   transition: visibility 0.3s, opacity 0.3s linear;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 5;
+}
+.popup__login {  
+  display: flex;
+  align-items: center;
+  justify-content: center;  
   background-color: transparent;
   position: fixed;
   top: 0;
   left: 0;
-  align-items: center;
-  justify-content: center;
 }
-
 .popup_opened {
   visibility: visible;
   opacity: 1;
 }
-.popup__login {
-  z-index: 25;
-}
+
 .popup__title {
   font-family: "IBM Plex Mono";
   font-style: normal;
@@ -54,8 +53,8 @@
 
 .popup__button-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 30px;
+  right: 30px;
   width: 30px;
   height: 30px;
   background-color: transparent;

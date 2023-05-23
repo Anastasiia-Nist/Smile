@@ -3,18 +3,16 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  gap: 30px;
+}
+.form div {
+  width: 80%;
 }
 .form__input {
-  margin-bottom: 22px;
-  height: 40px;
-  width: 331px;
+  height: 46px;
+  width: 100%;
 }
-.form__input:last-of-type {
-  margin-bottom: 42px;
-}
-
 .form__button {
-  margin-bottom: 94px;
   width: 109px;
   height: 40px;
   font-weight: 700;
@@ -30,4 +28,19 @@
   background-color: #fffb47;
   color: #000000;
   transition: 0.3s;
+}
+.form__section-password {
+  position: relative;
+}
+.password-control{
+    position: absolute;
+    top: 11px;
+    right: 6px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(./../images/view_find_review_watch_look_vision_eye_icon_219352.svg) 0 0 no-repeat;
+}
+.password-control.view {
+	background: url(./../images/privacy_safety_spy_secure_private_protection_security_icon_219371.svg) 0 0 no-repeat;
 }
