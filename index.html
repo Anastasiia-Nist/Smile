@@ -74,7 +74,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="main">
       <section class="intro" id="intro">
         <p class="intro__title">
           <span>Start to take</span> <span>a&nbsp;change.</span>
@@ -166,7 +166,7 @@
       <nav class="footer-nav">
         <ul class="footer__nav-list">
           <li class="footer__nav-block">
-            <p class="footer__paragraph">Service</p>
+            <h3 class="footer__paragraph">Service</h3>
             <ul>
               <li class="footer__nav-block-item"><a href="#" class="link">Personal</a></li>
               <li class="footer__nav-block-item"><a href="#" class="link">Business</a></li>
@@ -174,14 +174,14 @@
             </ul>
           </li>
           <li class="footer__nav-block">
-            <p class="footer__paragraph">API</p>
+            <h3 class="footer__paragraph">API</h3>
             <ul>
               <li class="footer__nav-block-item"><a href="#" class="link">Developer contact</a></li>
               <li class="footer__nav-block-item"><a href="#" class="link">Documentation</a></li>
             </ul>
           </li>
           <li class="footer__nav-block">
-            <p class="footer__paragraph">Company</p>
+            <h3 class="footer__paragraph">Company</h3>
             <ul>
               <li class="footer__nav-block-item"><a href="#" class="link">About us</a></li>
               <li class="footer__nav-block-item"><a href="#" class="link">Careers</a></li>
@@ -222,11 +222,13 @@
           autocomplete="off"
           novalidate
         >
-          <div>
-            <input type="text" class="form__input" placeholder="Login" />
+          <div class="form__section">
+            <input class="form__input" id="login" placeholder="Login" type="email" required/>
+            <span class="form__input-error" id="login-error"></span>
           </div>
-          <div class="form__section-password">
-            <input type="password" class="form__input" placeholder="Password" id="password-input" name="password"/>
+          <div class="form__section">
+            <input id="password" type="password" class="form__input" placeholder="Password" minlength="6" maxlength="20" required/>
+            <span class="form__input-error" id="password-error"></span>
             <a href="#" class="password-control"></a>
           </div>
           <button class="form__button button" type="summit">Sign Up</button>
