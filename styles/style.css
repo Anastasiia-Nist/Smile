@@ -197,8 +197,9 @@
   fill: #000;
   margin-left: 10px;
 }
-.global__svg:hover {
+.global__link:hover .global__svg {
   fill: currentColor;
+  transition: fill .3s ease-out;
 }
 .global__title {
   font-family: "IBM Plex Mono";
@@ -225,6 +226,10 @@
   line-height: 87%;
   z-index: 1;
   width: fit-content;
+}
+.global__link:hover .global__description {
+  color: #9747ff;
+  transition: color .3s ease-out;
 }
 .global__container {
   width: 440px;

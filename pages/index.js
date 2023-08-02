@@ -1,60 +1,67 @@
-const popups = document.querySelectorAll(".popup");
-const popupLogin = document.querySelector(".popup__login");
-const popupBurger = document.querySelector(".nav-mobile");
-const btnsStarted = document.querySelectorAll(".button-started");
-const btnBurger = document.querySelector(".burger");
-const navMobile = document.querySelector(".nav-mobile");
-const mobileNavList = document.querySelectorAll(".nav-mobile__item");
+// modals
+const modalForm = document.querySelector(".popup__login");
+const modalNavigation = document.querySelector(".nav-mobile");
+
+// buttons
+const buttonsStartedList = document.querySelectorAll(".button-started");
+const buttonBurger = document.querySelector(".burger");
+const buttonPassword = document.querySelector(".password-control");
+
 const header = document.querySelector(".header");
-const loginForm = document.forms.LoginForm;
-const passwordControl = document.querySelector(".password-control");
-const inputListLogin = loginForm.querySelectorAll("input");
-let userInfo = {};
+const mobileNavigationList = document.querySelectorAll(".nav-mobile__item");
 
-const openPopup = (popup) => {
-  popup.classList.add("popup_opened");
+// form
+const form = document.forms.form;
+const inputList = form.querySelectorAll("input");
+const user = {};
+
+// Modal
+function openModal(modal) {
+  modal.classList.add("popup_opened");
   blockedScroll();
-  document.addEventListener("keydown", closeByEscape);
 };
 
-const closePopup = (popup) => {
-  popup.classList.remove("popup_opened");
-  anBlockedScroll();
-  document.removeEventListener("keydown", closeByEscape);
+function closeModal(modal) {
+  modal.classList.remove("popup_opened");
+  unBlockedScroll();
 };
 
-const closeByEscape = (evt) => {
-  if (evt.key === "Escape") {
-    const openedPopup = document.querySelector(".popup_opened");
-    closePopup(openedPopup);
-  }
-};
-// Закрытие на оверлей и кнопку Х
-popups.forEach((popup) => {
-  popup.addEventListener("mousedown", (evt) => {
+// Close modal
+function setModalListener(modal) {
+  document.addEventListener("keydown", (evt) => {
+    if (evt.key === "Escape") {
+      closeModal(modal);
+    }
+  });
+  modal.addEventListener("mousedown", (evt) => {
     if (evt.target.classList.contains("popup_opened")) {
-      closePopup(popup);
+      closeModal(modal);
     }
     if (evt.target.classList.contains("popup__button-close")) {
-      closePopup(popup);
+      closeModal(modal);
     }
   });
-});
+}
 
-const submitForm = (evt) => {
+// submit form
+function submitForm(evt) {
   evt.preventDefault();
   getInputValues();
-  closePopup(popupLogin);
+  evt.target.reset();
+  closeModal(modalForm);
 };
+
+// get values
 function getInputValues() {
-  inputListLogin.forEach((input) => {
-    userInfo[input.id] = input.value;
+  inputList.forEach((input) => {
+    user[input.id] = input.value;
   });
 }
+
 function blockedScroll() {
   document.body.classList.add("page-lock");
 }
-function anBlockedScroll() {
+function unBlockedScroll() {
   document.body.classList.remove("page-lock");
 }
 
@@ -70,19 +77,17 @@ function showPassword(evt) {
   //return false;
 }
 
-//валидация
+// validation
 function showError(inputElement) {
   const errorElement = document.getElementById(`${inputElement.id}-error`);
-  errorElement.textContent = inputElement.validationMessage;
   errorElement.classList.add(`form__input-error_active`);
 }
 function hiddenError(inputElement) {
   const errorElement = document.getElementById(`${inputElement.id}-error`);
   errorElement.classList.remove(`form__input-error_active`);
-  errorElement.textContent = "";
 }
 function hiddenAllErrors() {
-  inputListLogin.forEach((inputElement) => {
+  inputList.forEach((inputElement) => {
     hiddenError(inputElement);
   });
 }
@@ -100,25 +105,37 @@ function isValid(inputElement) {
   }
 }
 
-//слушатели на странице
-btnsStarted.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    openPopup(popupLogin);
-    hiddenAllErrors();
-  });
-});
-btnBurger.addEventListener("click", () => openPopup(popupBurger));
-mobileNavList.forEach((item) => {
-  item.addEventListener("click", () => closePopup(popupBurger));
-});
-loginForm.addEventListener("submit", submitForm);
+// All EventListener
+function initPage() {
 
-passwordControl.addEventListener("click", showPassword);
+  // close modal
+  setModalListener(modalForm);
+  setModalListener(modalNavigation);
 
-inputListLogin.forEach((inputElement) => {
-  inputElement.addEventListener("input", () => {
-    isValid(inputElement);
-    toggleButtonState(loginForm);
+  // all buttons 'Get Started'
+  buttonsStartedList.forEach((button) => {
+    button.addEventListener("click", () => {
+      openModal(modalForm);
+      hiddenAllErrors();
+    });
   });
-  toggleButtonState(loginForm);
-});
+
+  buttonBurger.addEventListener("click", () => openModal(modalNavigation));
+
+  mobileNavigationList.forEach((item) => {
+    item.addEventListener("click", () => closeModal(modalNavigation));
+  });
+
+  form.addEventListener("submit", submitForm);
+
+  buttonPassword.addEventListener("click", showPassword);
+  // all input validation
+  inputList.forEach((inputElement) => {
+    inputElement.addEventListener("input", () => {
+      isValid(inputElement);
+      toggleButtonState(form);
+    });
+    toggleButtonState(form);
+  });
+}
+initPage();

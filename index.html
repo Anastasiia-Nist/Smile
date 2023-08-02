@@ -100,9 +100,10 @@
           <p class="global__subtitle">
             We are expanding to over 110+ countries
           </p>
-          <a href="#" class="global__link link">
-            <p>
+          <a href="#" class="global__link">
+            <span class="global__description">
               See supported countries
+            </span>
               <svg
                 class="global__svg"
                 width="16"
@@ -111,8 +112,7 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path d="M12.01 3.5H0V5.5H12.01V8.5L16 4.5L12.01 0.5V3.5Z" />
-              </svg>
-            </p>
+              </svg> 
           </a>
         </div>
         <div class="global__img">
@@ -216,7 +216,7 @@
         <h2 class="popup__title">Welcome!</h2>
         <form
           class="form"
-          name="LoginForm"
+          name="form"
           action="#"
           method="post"
           autocomplete="off"
@@ -224,11 +224,11 @@
         >
           <div class="form__section">
             <input class="form__input" id="login" placeholder="Login" type="email" required/>
-            <span class="form__input-error" id="login-error"></span>
+            <span class="form__input-error" id="login-error">Enter e-mail</span>
           </div>
           <div class="form__section">
             <input id="password" type="password" class="form__input" placeholder="Password" minlength="6" maxlength="20" required/>
-            <span class="form__input-error" id="password-error"></span>
+            <span class="form__input-error" id="password-error">Password must be at least 8 characters</span>
             <a href="#" class="password-control"></a>
           </div>
           <button class="form__button button" type="summit">Sign Up</button>
